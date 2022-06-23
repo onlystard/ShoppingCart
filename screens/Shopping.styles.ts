@@ -98,5 +98,6 @@ export default StyleSheet.create({
     marginVertical: Size.width12,
     borderRadius: Size.width8
   },
-  sizeColorsText: { color: '#0F172A', marginLeft: Size.width14 }
+  sizeColorsText: { color: '#0F172A', marginLeft: Size.width14 },
+  imageIcon: { width: Size.width15, height: Size.width15 }
 })

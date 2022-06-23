@@ -1,7 +1,7 @@
 import React, { memo, useCallback, useMemo, useRef, useState } from 'react'
-import { Image, View, Text } from 'react-native'
+import { Image, View, Text, ScrollView } from 'react-native'
 import styles from './Shopping.styles'
-import { Ionicons as Icon } from '@expo/vector-icons'
+import { FontAwesome } from '@expo/vector-icons'
 import { Button } from '../components'
 import { IItems, IState } from './Shopping.type'
 import { Footer } from './_components'
@@ -86,16 +86,16 @@ const ShoppingScreens = () => {
         </View>
         <View style={styles.viewInfoProduct}>
           <View style={styles.viewRanking}>
-            <Icon name={'star'} color={'#FDCC0B'} size={Size.width14} />
-            <Icon name={'star'} color={'#FDCC0B'} size={Size.width14} />
-            <Icon name={'star'} color={'#FDCC0B'} size={Size.width14} />
-            <Icon name={'star'} color={'#FDCC0B'} size={Size.width14} />
-            <Icon name={'star'} color={'#FDCC0B'} size={Size.width14} />
+            <FontAwesome name={'star'} color={'#FDCC0B'} size={Size.width14} />
+            <FontAwesome name={'star'} color={'#FDCC0B'} size={Size.width14} />
+            <FontAwesome name={'star'} color={'#FDCC0B'} size={Size.width14} />
+            <FontAwesome name={'star'} color={'#FDCC0B'} size={Size.width14} />
+            <FontAwesome name={'star'} color={'#FDCC0B'} size={Size.width14} />
             <Text style={styles.textInfoBuy}>996 • Đã bán 1201</Text>
           </View>
 
           <View style={styles.viewLike}>
-            <Icon
+            <FontAwesome
               name={'heart'}
               size={Size.width20}
               color={'white'}
@@ -106,10 +106,13 @@ const ShoppingScreens = () => {
       </View>
       <Button style={styles.btnPickSize} onPress={toggleBottomNavigationView}>
         <View style={{ flexDirection: 'row' }}>
-          <Icon name={'pricetags'} />
+          <Image
+            source={require('../assets/images/iconPick.png')}
+            style={styles.imageIcon}
+          />
           <Text style={styles.sizeColorsText}>Màu, Kích thước</Text>
         </View>
-        <Icon name={'arrow-forward'} />
+        <FontAwesome name={'chevron-right'} color={'#9CA1B8'} />
       </Button>
       <Footer
         disabled={_disableButtonAddToCard}
